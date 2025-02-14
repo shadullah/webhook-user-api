@@ -103,7 +103,7 @@ export async function POST(request: Request) {
             console.log("Data stored successfully");
             return Response.json({
                 success: true,
-                message: "User created and data stored"
+                message: "Received"
             }, { status: 200 });
         } catch (error) {
             console.error("Error in Clerk", error);
@@ -118,6 +118,6 @@ export async function POST(request: Request) {
 
     return Response.json({
         success: true,
-        message: "Received"
+        message: "User not created in db"
     });
 }
